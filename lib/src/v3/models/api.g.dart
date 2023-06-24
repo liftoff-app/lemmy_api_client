@@ -88,8 +88,8 @@ _$_Modlog _$$_ModlogFromJson(Map<String, dynamic> json) => _$_Modlog(
       lockedPosts: (json['locked_posts'] as List<dynamic>)
           .map((e) => ModLockPostView.fromJson(e as Map<String, dynamic>))
           .toList(),
-      stickiedPosts: (json['stickied_posts'] as List<dynamic>)
-          .map((e) => ModStickyPostView.fromJson(e as Map<String, dynamic>))
+      featuredPosts: (json['featured_posts'] as List<dynamic>)
+          .map((e) => ModFeaturePostView.fromJson(e as Map<String, dynamic>))
           .toList(),
       removedComments: (json['removed_comments'] as List<dynamic>)
           .map((e) => ModRemoveCommentView.fromJson(e as Map<String, dynamic>))
@@ -122,7 +122,7 @@ _$_Modlog _$$_ModlogFromJson(Map<String, dynamic> json) => _$_Modlog(
 Map<String, dynamic> _$$_ModlogToJson(_$_Modlog instance) => <String, dynamic>{
       'removed_posts': instance.removedPosts.map((e) => e.toJson()).toList(),
       'locked_posts': instance.lockedPosts.map((e) => e.toJson()).toList(),
-      'stickied_posts': instance.stickiedPosts.map((e) => e.toJson()).toList(),
+      'featured_posts': instance.featuredPosts.map((e) => e.toJson()).toList(),
       'removed_comments':
           instance.removedComments.map((e) => e.toJson()).toList(),
       'removed_communities':

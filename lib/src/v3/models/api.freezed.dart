@@ -830,7 +830,7 @@ mixin _$Modlog {
   List<ModRemovePostView> get removedPosts =>
       throw _privateConstructorUsedError;
   List<ModLockPostView> get lockedPosts => throw _privateConstructorUsedError;
-  List<ModStickyPostView> get stickiedPosts =>
+  List<ModFeaturePostView> get featuredPosts =>
       throw _privateConstructorUsedError;
   List<ModRemoveCommentView> get removedComments =>
       throw _privateConstructorUsedError;
@@ -859,7 +859,7 @@ abstract class $ModlogCopyWith<$Res> {
   $Res call(
       {List<ModRemovePostView> removedPosts,
       List<ModLockPostView> lockedPosts,
-      List<ModStickyPostView> stickiedPosts,
+      List<ModFeaturePostView> featuredPosts,
       List<ModRemoveCommentView> removedComments,
       List<ModRemoveCommunityView> removedCommunities,
       List<ModBanFromCommunityView> bannedFromCommunity,
@@ -885,7 +885,7 @@ class _$ModlogCopyWithImpl<$Res, $Val extends Modlog>
   $Res call({
     Object? removedPosts = null,
     Object? lockedPosts = null,
-    Object? stickiedPosts = null,
+    Object? featuredPosts = null,
     Object? removedComments = null,
     Object? removedCommunities = null,
     Object? bannedFromCommunity = null,
@@ -904,10 +904,10 @@ class _$ModlogCopyWithImpl<$Res, $Val extends Modlog>
           ? _value.lockedPosts
           : lockedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModLockPostView>,
-      stickiedPosts: null == stickiedPosts
-          ? _value.stickiedPosts
-          : stickiedPosts // ignore: cast_nullable_to_non_nullable
-              as List<ModStickyPostView>,
+      featuredPosts: null == featuredPosts
+          ? _value.featuredPosts
+          : featuredPosts // ignore: cast_nullable_to_non_nullable
+              as List<ModFeaturePostView>,
       removedComments: null == removedComments
           ? _value.removedComments
           : removedComments // ignore: cast_nullable_to_non_nullable
@@ -953,7 +953,7 @@ abstract class _$$_ModlogCopyWith<$Res> implements $ModlogCopyWith<$Res> {
   $Res call(
       {List<ModRemovePostView> removedPosts,
       List<ModLockPostView> lockedPosts,
-      List<ModStickyPostView> stickiedPosts,
+      List<ModFeaturePostView> featuredPosts,
       List<ModRemoveCommentView> removedComments,
       List<ModRemoveCommunityView> removedCommunities,
       List<ModBanFromCommunityView> bannedFromCommunity,
@@ -976,7 +976,7 @@ class __$$_ModlogCopyWithImpl<$Res>
   $Res call({
     Object? removedPosts = null,
     Object? lockedPosts = null,
-    Object? stickiedPosts = null,
+    Object? featuredPosts = null,
     Object? removedComments = null,
     Object? removedCommunities = null,
     Object? bannedFromCommunity = null,
@@ -995,10 +995,10 @@ class __$$_ModlogCopyWithImpl<$Res>
           ? _value._lockedPosts
           : lockedPosts // ignore: cast_nullable_to_non_nullable
               as List<ModLockPostView>,
-      stickiedPosts: null == stickiedPosts
-          ? _value._stickiedPosts
-          : stickiedPosts // ignore: cast_nullable_to_non_nullable
-              as List<ModStickyPostView>,
+      featuredPosts: null == featuredPosts
+          ? _value._featuredPosts
+          : featuredPosts // ignore: cast_nullable_to_non_nullable
+              as List<ModFeaturePostView>,
       removedComments: null == removedComments
           ? _value._removedComments
           : removedComments // ignore: cast_nullable_to_non_nullable
@@ -1042,7 +1042,7 @@ class _$_Modlog extends _Modlog {
   const _$_Modlog(
       {required final List<ModRemovePostView> removedPosts,
       required final List<ModLockPostView> lockedPosts,
-      required final List<ModStickyPostView> stickiedPosts,
+      required final List<ModFeaturePostView> featuredPosts,
       required final List<ModRemoveCommentView> removedComments,
       required final List<ModRemoveCommunityView> removedCommunities,
       required final List<ModBanFromCommunityView> bannedFromCommunity,
@@ -1053,7 +1053,7 @@ class _$_Modlog extends _Modlog {
       required this.instanceHost})
       : _removedPosts = removedPosts,
         _lockedPosts = lockedPosts,
-        _stickiedPosts = stickiedPosts,
+        _featuredPosts = featuredPosts,
         _removedComments = removedComments,
         _removedCommunities = removedCommunities,
         _bannedFromCommunity = bannedFromCommunity,
@@ -1082,12 +1082,12 @@ class _$_Modlog extends _Modlog {
     return EqualUnmodifiableListView(_lockedPosts);
   }
 
-  final List<ModStickyPostView> _stickiedPosts;
+  final List<ModFeaturePostView> _featuredPosts;
   @override
-  List<ModStickyPostView> get stickiedPosts {
-    if (_stickiedPosts is EqualUnmodifiableListView) return _stickiedPosts;
+  List<ModFeaturePostView> get featuredPosts {
+    if (_featuredPosts is EqualUnmodifiableListView) return _featuredPosts;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_stickiedPosts);
+    return EqualUnmodifiableListView(_featuredPosts);
   }
 
   final List<ModRemoveCommentView> _removedComments;
@@ -1155,7 +1155,7 @@ class _$_Modlog extends _Modlog {
 
   @override
   String toString() {
-    return 'Modlog(removedPosts: $removedPosts, lockedPosts: $lockedPosts, stickiedPosts: $stickiedPosts, removedComments: $removedComments, removedCommunities: $removedCommunities, bannedFromCommunity: $bannedFromCommunity, banned: $banned, addedToCommunity: $addedToCommunity, transferredToCommunity: $transferredToCommunity, added: $added, instanceHost: $instanceHost)';
+    return 'Modlog(removedPosts: $removedPosts, lockedPosts: $lockedPosts, featuredPosts: $featuredPosts, removedComments: $removedComments, removedCommunities: $removedCommunities, bannedFromCommunity: $bannedFromCommunity, banned: $banned, addedToCommunity: $addedToCommunity, transferredToCommunity: $transferredToCommunity, added: $added, instanceHost: $instanceHost)';
   }
 
   @override
@@ -1168,7 +1168,7 @@ class _$_Modlog extends _Modlog {
             const DeepCollectionEquality()
                 .equals(other._lockedPosts, _lockedPosts) &&
             const DeepCollectionEquality()
-                .equals(other._stickiedPosts, _stickiedPosts) &&
+                .equals(other._featuredPosts, _featuredPosts) &&
             const DeepCollectionEquality()
                 .equals(other._removedComments, _removedComments) &&
             const DeepCollectionEquality()
@@ -1191,7 +1191,7 @@ class _$_Modlog extends _Modlog {
       runtimeType,
       const DeepCollectionEquality().hash(_removedPosts),
       const DeepCollectionEquality().hash(_lockedPosts),
-      const DeepCollectionEquality().hash(_stickiedPosts),
+      const DeepCollectionEquality().hash(_featuredPosts),
       const DeepCollectionEquality().hash(_removedComments),
       const DeepCollectionEquality().hash(_removedCommunities),
       const DeepCollectionEquality().hash(_bannedFromCommunity),
@@ -1219,7 +1219,7 @@ abstract class _Modlog extends Modlog {
   const factory _Modlog(
       {required final List<ModRemovePostView> removedPosts,
       required final List<ModLockPostView> lockedPosts,
-      required final List<ModStickyPostView> stickiedPosts,
+      required final List<ModFeaturePostView> featuredPosts,
       required final List<ModRemoveCommentView> removedComments,
       required final List<ModRemoveCommunityView> removedCommunities,
       required final List<ModBanFromCommunityView> bannedFromCommunity,
@@ -1237,7 +1237,7 @@ abstract class _Modlog extends Modlog {
   @override
   List<ModLockPostView> get lockedPosts;
   @override
-  List<ModStickyPostView> get stickiedPosts;
+  List<ModFeaturePostView> get featuredPosts;
   @override
   List<ModRemoveCommentView> get removedComments;
   @override

@@ -4069,45 +4069,45 @@ abstract class _ModLockPost extends ModLockPost {
       throw _privateConstructorUsedError;
 }
 
-ModStickyPost _$ModStickyPostFromJson(Map<String, dynamic> json) {
-  return _ModStickyPost.fromJson(json);
+ModFeaturePost _$ModFeaturePostFromJson(Map<String, dynamic> json) {
+  return _ModFeaturePost.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ModStickyPost {
+mixin _$ModFeaturePost {
   int get id => throw _privateConstructorUsedError;
   int get modPersonId => throw _privateConstructorUsedError;
   int get postId => throw _privateConstructorUsedError;
-  bool? get stickied => throw _privateConstructorUsedError;
+  bool? get featured => throw _privateConstructorUsedError;
   @JsonKey(name: 'when_')
   DateTime get when => throw _privateConstructorUsedError;
   String get instanceHost => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ModStickyPostCopyWith<ModStickyPost> get copyWith =>
+  $ModFeaturePostCopyWith<ModFeaturePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ModStickyPostCopyWith<$Res> {
-  factory $ModStickyPostCopyWith(
-          ModStickyPost value, $Res Function(ModStickyPost) then) =
-      _$ModStickyPostCopyWithImpl<$Res, ModStickyPost>;
+abstract class $ModFeaturePostCopyWith<$Res> {
+  factory $ModFeaturePostCopyWith(
+          ModFeaturePost value, $Res Function(ModFeaturePost) then) =
+      _$ModFeaturePostCopyWithImpl<$Res, ModFeaturePost>;
   @useResult
   $Res call(
       {int id,
       int modPersonId,
       int postId,
-      bool? stickied,
+      bool? featured,
       @JsonKey(name: 'when_') DateTime when,
       String instanceHost});
 }
 
 /// @nodoc
-class _$ModStickyPostCopyWithImpl<$Res, $Val extends ModStickyPost>
-    implements $ModStickyPostCopyWith<$Res> {
-  _$ModStickyPostCopyWithImpl(this._value, this._then);
+class _$ModFeaturePostCopyWithImpl<$Res, $Val extends ModFeaturePost>
+    implements $ModFeaturePostCopyWith<$Res> {
+  _$ModFeaturePostCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -4120,7 +4120,7 @@ class _$ModStickyPostCopyWithImpl<$Res, $Val extends ModStickyPost>
     Object? id = null,
     Object? modPersonId = null,
     Object? postId = null,
-    Object? stickied = freezed,
+    Object? featured = freezed,
     Object? when = null,
     Object? instanceHost = null,
   }) {
@@ -4137,9 +4137,9 @@ class _$ModStickyPostCopyWithImpl<$Res, $Val extends ModStickyPost>
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      stickied: freezed == stickied
-          ? _value.stickied
-          : stickied // ignore: cast_nullable_to_non_nullable
+      featured: freezed == featured
+          ? _value.featured
+          : featured // ignore: cast_nullable_to_non_nullable
               as bool?,
       when: null == when
           ? _value.when
@@ -4154,28 +4154,28 @@ class _$ModStickyPostCopyWithImpl<$Res, $Val extends ModStickyPost>
 }
 
 /// @nodoc
-abstract class _$$_ModStickyPostCopyWith<$Res>
-    implements $ModStickyPostCopyWith<$Res> {
-  factory _$$_ModStickyPostCopyWith(
-          _$_ModStickyPost value, $Res Function(_$_ModStickyPost) then) =
-      __$$_ModStickyPostCopyWithImpl<$Res>;
+abstract class _$$_ModFeaturePostCopyWith<$Res>
+    implements $ModFeaturePostCopyWith<$Res> {
+  factory _$$_ModFeaturePostCopyWith(
+          _$_ModFeaturePost value, $Res Function(_$_ModFeaturePost) then) =
+      __$$_ModFeaturePostCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
       {int id,
       int modPersonId,
       int postId,
-      bool? stickied,
+      bool? featured,
       @JsonKey(name: 'when_') DateTime when,
       String instanceHost});
 }
 
 /// @nodoc
-class __$$_ModStickyPostCopyWithImpl<$Res>
-    extends _$ModStickyPostCopyWithImpl<$Res, _$_ModStickyPost>
-    implements _$$_ModStickyPostCopyWith<$Res> {
-  __$$_ModStickyPostCopyWithImpl(
-      _$_ModStickyPost _value, $Res Function(_$_ModStickyPost) _then)
+class __$$_ModFeaturePostCopyWithImpl<$Res>
+    extends _$ModFeaturePostCopyWithImpl<$Res, _$_ModFeaturePost>
+    implements _$$_ModFeaturePostCopyWith<$Res> {
+  __$$_ModFeaturePostCopyWithImpl(
+      _$_ModFeaturePost _value, $Res Function(_$_ModFeaturePost) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4184,11 +4184,11 @@ class __$$_ModStickyPostCopyWithImpl<$Res>
     Object? id = null,
     Object? modPersonId = null,
     Object? postId = null,
-    Object? stickied = freezed,
+    Object? featured = freezed,
     Object? when = null,
     Object? instanceHost = null,
   }) {
-    return _then(_$_ModStickyPost(
+    return _then(_$_ModFeaturePost(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -4201,9 +4201,9 @@ class __$$_ModStickyPostCopyWithImpl<$Res>
           ? _value.postId
           : postId // ignore: cast_nullable_to_non_nullable
               as int,
-      stickied: freezed == stickied
-          ? _value.stickied
-          : stickied // ignore: cast_nullable_to_non_nullable
+      featured: freezed == featured
+          ? _value.featured
+          : featured // ignore: cast_nullable_to_non_nullable
               as bool?,
       when: null == when
           ? _value.when
@@ -4220,18 +4220,18 @@ class __$$_ModStickyPostCopyWithImpl<$Res>
 /// @nodoc
 
 @modelSerde
-class _$_ModStickyPost extends _ModStickyPost {
-  const _$_ModStickyPost(
+class _$_ModFeaturePost extends _ModFeaturePost {
+  const _$_ModFeaturePost(
       {required this.id,
       required this.modPersonId,
       required this.postId,
-      this.stickied,
+      this.featured,
       @JsonKey(name: 'when_') required this.when,
       required this.instanceHost})
       : super._();
 
-  factory _$_ModStickyPost.fromJson(Map<String, dynamic> json) =>
-      _$$_ModStickyPostFromJson(json);
+  factory _$_ModFeaturePost.fromJson(Map<String, dynamic> json) =>
+      _$$_ModFeaturePostFromJson(json);
 
   @override
   final int id;
@@ -4240,7 +4240,7 @@ class _$_ModStickyPost extends _ModStickyPost {
   @override
   final int postId;
   @override
-  final bool? stickied;
+  final bool? featured;
   @override
   @JsonKey(name: 'when_')
   final DateTime when;
@@ -4249,20 +4249,20 @@ class _$_ModStickyPost extends _ModStickyPost {
 
   @override
   String toString() {
-    return 'ModStickyPost(id: $id, modPersonId: $modPersonId, postId: $postId, stickied: $stickied, when: $when, instanceHost: $instanceHost)';
+    return 'ModFeaturePost(id: $id, modPersonId: $modPersonId, postId: $postId, featured: $featured, when: $when, instanceHost: $instanceHost)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ModStickyPost &&
+            other is _$_ModFeaturePost &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.modPersonId, modPersonId) ||
                 other.modPersonId == modPersonId) &&
             (identical(other.postId, postId) || other.postId == postId) &&
-            (identical(other.stickied, stickied) ||
-                other.stickied == stickied) &&
+            (identical(other.featured, featured) ||
+                other.featured == featured) &&
             (identical(other.when, when) || other.when == when) &&
             (identical(other.instanceHost, instanceHost) ||
                 other.instanceHost == instanceHost));
@@ -4271,34 +4271,34 @@ class _$_ModStickyPost extends _ModStickyPost {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
-      runtimeType, id, modPersonId, postId, stickied, when, instanceHost);
+      runtimeType, id, modPersonId, postId, featured, when, instanceHost);
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ModStickyPostCopyWith<_$_ModStickyPost> get copyWith =>
-      __$$_ModStickyPostCopyWithImpl<_$_ModStickyPost>(this, _$identity);
+  _$$_ModFeaturePostCopyWith<_$_ModFeaturePost> get copyWith =>
+      __$$_ModFeaturePostCopyWithImpl<_$_ModFeaturePost>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ModStickyPostToJson(
+    return _$$_ModFeaturePostToJson(
       this,
     );
   }
 }
 
-abstract class _ModStickyPost extends ModStickyPost {
-  const factory _ModStickyPost(
+abstract class _ModFeaturePost extends ModFeaturePost {
+  const factory _ModFeaturePost(
       {required final int id,
       required final int modPersonId,
       required final int postId,
-      final bool? stickied,
+      final bool? featured,
       @JsonKey(name: 'when_') required final DateTime when,
-      required final String instanceHost}) = _$_ModStickyPost;
-  const _ModStickyPost._() : super._();
+      required final String instanceHost}) = _$_ModFeaturePost;
+  const _ModFeaturePost._() : super._();
 
-  factory _ModStickyPost.fromJson(Map<String, dynamic> json) =
-      _$_ModStickyPost.fromJson;
+  factory _ModFeaturePost.fromJson(Map<String, dynamic> json) =
+      _$_ModFeaturePost.fromJson;
 
   @override
   int get id;
@@ -4307,7 +4307,7 @@ abstract class _ModStickyPost extends ModStickyPost {
   @override
   int get postId;
   @override
-  bool? get stickied;
+  bool? get featured;
   @override
   @JsonKey(name: 'when_')
   DateTime get when;
@@ -4315,7 +4315,7 @@ abstract class _ModStickyPost extends ModStickyPost {
   String get instanceHost;
   @override
   @JsonKey(ignore: true)
-  _$$_ModStickyPostCopyWith<_$_ModStickyPost> get copyWith =>
+  _$$_ModFeaturePostCopyWith<_$_ModFeaturePost> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

@@ -379,22 +379,22 @@ Map<String, dynamic> _$$_ModLockPostToJson(_$_ModLockPost instance) =>
       'instance_host': instance.instanceHost,
     };
 
-_$_ModStickyPost _$$_ModStickyPostFromJson(Map<String, dynamic> json) =>
-    _$_ModStickyPost(
+_$_ModFeaturePost _$$_ModFeaturePostFromJson(Map<String, dynamic> json) =>
+    _$_ModFeaturePost(
       id: json['id'] as int,
       modPersonId: json['mod_person_id'] as int,
       postId: json['post_id'] as int,
-      stickied: json['stickied'] as bool?,
+      featured: json['featured'] as bool?,
       when: const ForceUtcDateTime().fromJson(json['when_'] as String),
       instanceHost: json['instance_host'] as String,
     );
 
-Map<String, dynamic> _$$_ModStickyPostToJson(_$_ModStickyPost instance) =>
+Map<String, dynamic> _$$_ModFeaturePostToJson(_$_ModFeaturePost instance) =>
     <String, dynamic>{
       'id': instance.id,
       'mod_person_id': instance.modPersonId,
       'post_id': instance.postId,
-      'stickied': instance.stickied,
+      'featured': instance.featured,
       'when_': const ForceUtcDateTime().toJson(instance.when),
       'instance_host': instance.instanceHost,
     };

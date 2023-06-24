@@ -185,7 +185,6 @@ class ModAddCommunityView with _$ModAddCommunityView {
   @modelSerde
   const factory ModAddCommunityView({
     required ModAddCommunity modAddCommunity,
-    required PersonSafe moderator,
     required CommunitySafe community,
     required PersonSafe moddedPerson,
     required String instanceHost,
@@ -201,7 +200,6 @@ class ModTransferCommunityView with _$ModTransferCommunityView {
   @modelSerde
   const factory ModTransferCommunityView({
     required ModTransferCommunity modTransferCommunity,
-    required PersonSafe moderator,
     required CommunitySafe community,
     required PersonSafe moddedPerson,
     required String instanceHost,
@@ -217,7 +215,6 @@ class ModAddView with _$ModAddView {
   @modelSerde
   const factory ModAddView({
     required ModAdd modAdd,
-    required PersonSafe moderator,
     required PersonSafe moddedPerson,
     required String instanceHost,
   }) = _ModAddView;
@@ -232,7 +229,6 @@ class ModBanFromCommunityView with _$ModBanFromCommunityView {
   @modelSerde
   const factory ModBanFromCommunityView({
     required ModBanFromCommunity modBanFromCommunity,
-    required PersonSafe moderator,
     required CommunitySafe community,
     required PersonSafe bannedPerson,
     required String instanceHost,
@@ -248,7 +244,6 @@ class ModBanView with _$ModBanView {
   @modelSerde
   const factory ModBanView({
     required ModBan modBan,
-    required PersonSafe moderator,
     required PersonSafe bannedPerson,
     required String instanceHost,
   }) = _ModBanView;
@@ -263,7 +258,6 @@ class ModLockPostView with _$ModLockPostView {
   @modelSerde
   const factory ModLockPostView({
     required ModLockPost modLockPost,
-    required PersonSafe moderator,
     required Post post,
     required CommunitySafe community,
     required String instanceHost,
@@ -279,7 +273,6 @@ class ModRemoveCommentView with _$ModRemoveCommentView {
   @modelSerde
   const factory ModRemoveCommentView({
     required ModRemoveComment modRemoveComment,
-    required PersonSafe moderator,
     required Comment comment,
     required PersonSafe commenter,
     required Post post,
@@ -297,7 +290,6 @@ class ModRemoveCommunityView with _$ModRemoveCommunityView {
   @modelSerde
   const factory ModRemoveCommunityView({
     required ModRemoveCommunity modRemoveCommunity,
-    required PersonSafe moderator,
     required CommunitySafe community,
     required String instanceHost,
   }) = _ModRemoveCommunityView;
@@ -312,7 +304,6 @@ class ModRemovePostView with _$ModRemovePostView {
   @modelSerde
   const factory ModRemovePostView({
     required ModRemovePost modRemovePost,
-    required PersonSafe moderator,
     required Post post,
     required CommunitySafe community,
     required String instanceHost,
@@ -324,19 +315,18 @@ class ModRemovePostView with _$ModRemovePostView {
 }
 
 @freezed
-class ModStickyPostView with _$ModStickyPostView {
+class ModFeaturePostView with _$ModFeaturePostView {
   @modelSerde
-  const factory ModStickyPostView({
-    required ModStickyPost modStickyPost,
-    required PersonSafe moderator,
+  const factory ModFeaturePostView({
+    required ModFeaturePost modFeaturePost,
     required Post post,
     required CommunitySafe community,
     required String instanceHost,
-  }) = _ModStickyPostView;
+  }) = _ModFeaturePostView;
 
-  const ModStickyPostView._();
-  factory ModStickyPostView.fromJson(Map<String, dynamic> json) =>
-      _$ModStickyPostViewFromJson(json);
+  const ModFeaturePostView._();
+  factory ModFeaturePostView.fromJson(Map<String, dynamic> json) =>
+      _$ModFeaturePostViewFromJson(json);
 }
 
 @freezed

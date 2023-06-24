@@ -248,20 +248,20 @@ class ModLockPost with _$ModLockPost {
 }
 
 @freezed
-class ModStickyPost with _$ModStickyPost {
+class ModFeaturePost with _$ModFeaturePost {
   @modelSerde
-  const factory ModStickyPost({
+  const factory ModFeaturePost({
     required int id,
     required int modPersonId,
     required int postId,
-    bool? stickied,
+    bool? featured,
     @JsonKey(name: 'when_') required DateTime when,
     required String instanceHost,
-  }) = _ModStickyPost;
+  }) = _ModFeaturePost;
 
-  const ModStickyPost._();
-  factory ModStickyPost.fromJson(Map<String, dynamic> json) =>
-      _$ModStickyPostFromJson(json);
+  const ModFeaturePost._();
+  factory ModFeaturePost.fromJson(Map<String, dynamic> json) =>
+      _$ModFeaturePostFromJson(json);
 }
 
 @freezed
