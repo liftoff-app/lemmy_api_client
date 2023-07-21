@@ -24,6 +24,14 @@ class PictrsApi {
     req.headers['Cookie'] = 'jwt=$auth';
 
     final res = await req.send();
+    if (res.statusCode != 200) {
+      switch (res.statusCode) {
+        case 413:
+          throw const LemmyApiException('pictrs_payload_too_large');
+        default:
+          throw const LemmyApiException('pictrs_unknown_error');
+      }
+    }
     final Map<String, dynamic> body =
         jsonDecode(utf8.decode(await res.stream.toBytes()));
     body['instance_host'] = host;
