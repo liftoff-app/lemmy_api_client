@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:html';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart' as http;
@@ -24,7 +25,7 @@ class PictrsApi {
     req.headers['Cookie'] = 'jwt=$auth';
 
     final res = await req.send();
-    if (res.statusCode != 200) {
+    if (res.statusCode != HttpStatus.created) {
       switch (res.statusCode) {
         case 413:
           throw const LemmyApiException('pictrs_payload_too_large');
